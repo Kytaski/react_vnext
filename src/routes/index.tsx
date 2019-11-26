@@ -2,14 +2,16 @@ import React from 'react'
 import { Switch } from 'react-router-dom'
 import Route from './route'
 
-import Declarations from '../screens/Declarations'
-import Home from '../screens/Home'
+import Home from '../screens/Home/Home'
+import Declarations from '../screens/DeclarationsList/Index'
+import ImportFile from '../screens/ImportFile'
 
 export default function Routes() {
     return (
         <Switch>
-            <Route path="/Home" component={Home} />
-            <Route path="/" component={Declarations} />
+            <Route path="/liste-declarations" component={Declarations} />
+            <Route path="/importer-fichier" component={ImportFile} />
+            <Route path="/" component={Home} />
         </Switch>
     )
 }
