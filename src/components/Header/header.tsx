@@ -12,38 +12,39 @@ import LogoSvg from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
 import styles from './styles'
 import { grayDark, white } from '../../theme/colors'
+import { Z_FIXED } from 'zlib'
 // import { classes } from 'istanbul-lib-coverage'
 
 // import {LinkDefault, Paragraph} from 'components-ui/Font'
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            flexGrow: 1,
-        },
-        menuButton: {
-            marginRight: theme.spacing(2),
-        },
-        appBar: {
-            width: 1144,
-            height: 64,
-            background: 'rgb(255, 255, 255)',
-            bordeRadius: 0,
-        },
-        icon: {
-            width: 26,
-            height: 26,
-            // background: 'rgba(0, 0, 0, 0.54)',
-            borderRadius: 0,
-            opacity: 100,
-        },
-    })
-)
+// const useStyles = makeStyles((theme: Theme) =>
+//     createStyles({
+//         root: {
+//             flexGrow: 1,
+//         },
+//         menuButton: {
+//             marginRight: theme.spacing(2),
+//         },
+//         appBar: {
+//             width: 1144,
+//             height: 64,
+//             background: 'rgb(255, 255, 255)',
+//             bordeRadius: 0,
+//         },
+//         icon: {
+//             width: 26,
+//             height: 26,
+//             // background: 'rgba(0, 0, 0, 0.54)',
+//             borderRadius: 0,
+//             opacity: 100,
+//         },
+//     })
+// )
 const HeaderStyle = {
     backgroundColor: white,
     display: 'flex',
     height: '64px',
-    // position: 'fixed',
+    // position: 'fixed' as 'fixed',
     left: 0,
     zIndex: 1301,
     borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
@@ -68,7 +69,7 @@ const AlignText = {
 
 const AppTitle = {
     margin: '0',
-    fontSize: '20px',
+    fontSize: '24px',
     // '@media (max-width:767px)': {
     //     fontSize: '14px',
     // },
@@ -77,6 +78,20 @@ const AppTitle = {
     // },
     typo: 'regular',
     color: grayDark,
+    // fontWeight: 'normal',
+    height: '28px',
+    width: '164px',
+}
+
+const HeaderTitle = {
+    margin: '0',
+    fontSize: '20px',
+    typo: 'medium',
+    color: grayDark,
+    height: '48px',
+    width: '613px',
+    spacing: '0.25px',
+    fontWeight: 500
 }
 
 const Header = ({ headerTitle }) => (
@@ -87,7 +102,9 @@ const Header = ({ headerTitle }) => (
                 {/* <LogoSvg /> */}
             </Link>
             <div style={AlignText}>
-                <div style={AppTitle}>{headerTitle}</div>
+                <span style={AppTitle}>Cegid VNext</span>
+                <span style={AppTitle}>&nbsp;|&nbsp;</span>
+                <span style={HeaderTitle}>{headerTitle}</span>
             </div>
         </div>
     </header>

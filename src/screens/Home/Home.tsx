@@ -11,7 +11,7 @@ const Home = () => {
 }
 
 export default () => (
-    <MainLayout headerTitle="Cegid VNext | Accueil">
+    <MainLayout headerTitle="Accueil">
         <Home />
     </MainLayout>
 )
