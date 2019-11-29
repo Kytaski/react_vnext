@@ -1,4 +1,5 @@
 export interface IDeclarationsHeaderDto {
+  id: number,
   versionCT: EVersionCahierTechnique;
   dsnModele: EDsnModele;
   siret: string;
